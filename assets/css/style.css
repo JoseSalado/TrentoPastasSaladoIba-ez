@@ -1,0 +1,448 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Joan&family=Lobster&display=swap');
+*{  
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.bodyIndex{
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:     200px auto auto auto auto;
+    grid-template-areas:    "header header header header"
+                            "navbar navbar navbar navbar"
+                            "main   main  main    main"
+                            "aside  aside aside   aside"
+                            "footer footer footer footer";
+
+}
+
+.header {
+    
+    display: flex;
+    flex-direction:column;
+    grid-area: header ;
+    
+}
+.header img{
+    width: 100%;
+    height: 160px;
+
+
+}
+/*.imagen{
+    height:150px;
+}*/
+
+.header h1{ 
+  
+    color: white ;
+    text-align: center;
+    font-size: 45px;
+    background-color: green;
+    font-family: "Lobster";
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center; 
+    justify-content: space-between;  
+
+
+     
+}
+
+.aside{ 
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center; 
+    justify-content: space-between; 
+    
+}
+.footer {
+    background-color: green;
+    grid-area: footer;
+}
+.tarjeta1 h5{
+
+    
+    font-size: 15px;
+    color:white;
+    margin:15px 15px 15px 40px;
+    padding: 0px 0px 15px 15px;
+    
+}
+
+.tarjeta1 {
+ 
+    
+    background-color: green;
+    border-style: solid;
+    border-color: white;
+   
+    border-radius: 8px;
+  }
+
+.tamanioTarjeta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tarjeta1 img{
+    margin: 10px 15px 5px 30px;
+
+    width: 55%;
+}
+
+
+
+.tarjeta2{
+    
+
+    background-color: green;
+   
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 8px;
+    
+}
+
+.tarjeta2 img{
+    margin: 10px 15px 5px 30px;
+
+    width: 55%;
+}
+
+.tarjeta2 h5{
+
+    font-size: 15px;
+   
+    color:white;
+    margin:15px 15px 15px 40px;
+    padding: 0px 0px 5px 15px;
+}
+
+.navbar{   
+    margin-top: 10px;
+    padding: 10px;
+    grid-area: navbar; 
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position:relative;
+    background-color: green;
+   
+    
+}
+header img{
+    
+    width: 100%;
+    height: 300px;
+    
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+  
+}
+.navbar ul li {
+   
+    padding: 13px;
+   
+    
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.bodyRegistros{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "navbarRegistros navbarRegistros navbarRegistros"
+                         "headerRegistros headerRegistros headerRegistros"   
+                         "mainRegistros mainRegistros mainRegistro"
+                         "footerRegistros footerRegistros footerRegistros";
+
+}
+
+.navbarRegistros{
+    grid-area: navbarRegistros;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: green;
+
+}
+.navbarRegistros ul{
+    display: flex;
+    list-style: none;
+   
+
+}
+
+.navbarRegistros ul li{
+    padding: 15px;
+}
+.navbarRegistros ul li a{
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    
+}
+
+.headerRegistros{
+   grid-area: headerRegistros;
+   color: white ;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background-color: green;
+    font-family: "Lobster";
+
+}
+.mainRegistros{
+    grid-area: mainRegistros;
+   
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.formularioRegistros{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+     
+    background-color: greenyellow;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: yellowgreen;
+    
+
+}
+
+.footerRegistros{
+    grid-area: footerRegistros;
+    background-color: green;
+
+}
+.sexo{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: greenyellow;
+    width: 100%;
+   text-align: center;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+.btn input.enviar{
+    margin-bottom: 10px; /*ver biien despue*/
+}
+
+
+/*a{
+    color: white;
+    font-family: "Lobster";
+}
+/*.bodyRegistros{
+    display: grid;
+    padding: 5px;
+
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto auto  auto ;
+    grid-template-areas:    "navbarRegistros navbarRegistros navbarRegistros navbarRegistros"
+                            "headerRegistros headerRegistros headerRegistros headerRegistros"
+                            "mainRegistros   mainRegistros  mainRegistros    mainRegistros"
+                            "footerRegistros footerRegistros footerRegistros footerRegistros";
+
+}
+.navbarRegistros{
+    grid-area: navbarRegistros;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: green;
+
+}
+.navbarRegistros ul{
+    display: flex;
+    list-style: none;
+}
+.navbarRegistros ul li{
+
+    padding: 15px;
+}
+.navbarRegistros ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+
+}
+.headerRegistros{
+    display: flex;
+    flex-direction:column;
+    grid-area: headerRegistros ;
+
+}
+.headerRegistros h1{
+    color: white ;
+    text-align: center;
+    font-size: 35px;
+    background-color: green;
+    font-family: "Lobster";
+}
+
+.mainRegistros{
+    grid-area: mainRegistros;
+    display: flex;
+}
+.tarjetaRegistros{
+    /* width: 40%;
+     background-color: green;
+     border-style: solid;
+     border-color: white;
+     border-width: 3px;
+     border-radius: 8px;*/
+    
+    /* display: flex;
+     padding: 5px;
+     align-content: center;
+     flex-direction: column;
+     background-color: green;
+     
+     justify-content: space-around;
+ 
+ }
+ .sexo{
+    display: flex;
+    padding: 5px;
+    background-color: green;
+    
+ }
+ .formularioRegistros{
+    display: flex;
+    flex-direction: column;
+    
+ }
+
+.footerRegistros{
+    grid-area: footerRegistros;
+    display: flex;
+    background-color: green;
+}*/
+.bodyCarta{
+
+    background-image: url(../trento.jpg);
+    background-attachment: fixed;
+}
+
+.navbarCarta{
+
+    width: 100%;
+    
+    margin: 0;
+    position: sticky;
+    top: 0;
+    background-color: green;
+}
+
+.navbarCarta ul {
+
+    list-style: none;
+    margin: 0px;
+}
+
+.navbarCarta ul li{
+    display: inline-block;
+    padding: 10px 10px 10px 40px;
+   font-size: 24px;
+
+}
+.tarjetaContacto{
+    background-color: green;
+    font-size: 24px;
+    width: 30%;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 8px;
+}
+.tarjetaUbicacion{
+    background-color: green;
+    font-size: 20px;
+    width: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 8px;
+    color: white;
+    font-family: "Lobster";
+    
+}
+
+.tarjetaSorrentinos{
+    width: 20%;
+    background-color: green;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 8px;
+    color: white;
+
+}
+    .tarjetaProducto{
+        width: 20%;
+        background-color: green;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    border-radius: 8px;
+    color: white;
+    }
+
+    @media(min-width:768px){
+
+        .bodyIndex{
+    
+            
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 200px auto auto auto auto;
+            grid-template-areas:    "header header header header "
+                                    "navbar navbar navbar navbar "
+                                    "main   main  aside aside "
+                                    "main main aside aside"
+                                    "footer footer footer footer";
+        
+        }
+
+    }
+        
+    

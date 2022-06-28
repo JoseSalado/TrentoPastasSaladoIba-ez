@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/trento3 (2).jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Registros</title>
+</head>
+<body class="bodyRegistros">
+   
+    <nav class="navbarRegistros">
+ 
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./carta.html">Carta</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./ubicacion.html">Ubicacion</a></li>
+
+
+        </ul>
+        
+        
+        
+        
+
+    </nav>
+   
+    
+
+    <header class="headerRegistros">
+        <div>
+            <h1>Registro</h1>
+        </div>
+        
+    </header>
+
+        
+   
+   
+    <main class="mainRegistros">
+     
+        <div class="sexo">
+            <label for="sexo">Hombre</label>
+            <input type="radio" name="sexo" value = "h" >
+            <label for="sexo">Mujer</label>
+            <input type="radio" name="sexo" value="m">
+            <label for="sexo">No Binario</label>
+            <input type="radio" name="sexo" value="n">
+        </div>
+        
+        <div>
+            <form class="formularioRegistros" action="">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" required>
+            <br>
+            <input type="number" name="dni" id="dni" placeholder="Dni" required>
+            <br>
+            <input type="email" name="mail" id="mail" placeholder="E-mail" required>
+            <br>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <br>
+            <textarea name="comentario" id="comentario" cols="30" rows="10">Comentario</textarea>
+            <div class="btn">
+                <input class="enviar"   type="submit" value="Enviar">
+                <input class="reiniciar" type="reset" value="Reiniciar">
+            </div>
+            
+
+        </form></div>
+        
+    </main>
+
+    
+    <footer class="footerRegistros">
+        <h5>© 2022 josesalado, todos los derechos reservados</h5>
+    </footer>
+
+</body>
+</html>
