@@ -88,8 +88,14 @@
     border-color: white;
    
     border-radius: 8px;
+    transition: all 1s;
   }
-
+.tarjeta1:hover{
+    transform: translate(20px, -20px)
+}
+.tarjeta2:hover{
+    transform: translate(-20px, -20px)
+}
 .tamanioTarjeta{
     display: flex;
     flex-direction: column;
@@ -114,6 +120,7 @@
     border-color: white;
     border-width: 3px;
     border-radius: 8px;
+    transition: all 1s;
     
 }
 
@@ -167,6 +174,9 @@ header img{
     color: white;
     font-size: 24px;
 }
+
+    
+
 
 .bodyRegistros{
     display: grid;
