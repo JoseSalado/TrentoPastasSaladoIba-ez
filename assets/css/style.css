@@ -1,279 +1,224 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Joan&family=Lobster&display=swap');
-*{  
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Joan&family=Lobster&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.bodyIndex{
-    
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows:     200px auto auto auto auto;
-    grid-template-areas:    "header header header header"
-                            "navbar navbar navbar navbar"
-                            "main   main  main    main"
-                            "aside  aside aside   aside"
-                            "footer footer footer footer";
-
+.bodyIndex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px auto auto auto auto;
+  grid-template-areas: "header header header header" "navbar navbar navbar navbar" "main   main  main    main" "aside  aside aside   aside" "footer footer footer footer";
 }
 
 .header {
-    
-    display: flex;
-    flex-direction:column;
-    grid-area: header ;
-    
+  display: flex;
+  flex-direction: column;
+  grid-area: header;
 }
-.header img{
-    width: 100%;
-    height: 160px;
-
-
+.header img {
+  width: 100%;
+  height: 160px;
 }
+.header h1 {
+  color: white;
+  text-align: center;
+  font-size: 45px;
+  background-color: green;
+  font-family: "Lobster";
+}
+
 /*.imagen{
     height:150px;
 }*/
-
-.header h1{ 
-  
-    color: white ;
-    text-align: center;
-    font-size: 45px;
-    background-color: green;
-    font-family: "Lobster";
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.main{
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center; 
-    justify-content: space-between;  
-
-
-     
+.aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.aside{ 
-    grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center; 
-    justify-content: space-between; 
-    
-}
 .footer {
-    background-color: green;
-    grid-area: footer;
-}
-.tarjeta1 h5{
-
-    
-    font-size: 15px;
-    color:white;
-    margin:15px 15px 15px 40px;
-    padding: 0px 0px 15px 15px;
-    
+  background-color: green;
+  grid-area: footer;
 }
 
 .tarjeta1 {
- 
-    
-    background-color: green;
-    border-style: solid;
-    border-color: white;
-   
-    border-radius: 8px;
-    transition: all 1s;
-  }
-.tarjeta1:hover{
-    transform: translate(20px, -20px)
+  background-color: green;
+  border-style: solid;
+  border-color: white;
+  border-radius: 8px;
+  transition: all 1s;
 }
-.tarjeta2:hover{
-    transform: translate(-20px, -20px)
+.tarjeta1 img {
+  margin: 10px 15px 5px 30px;
+  width: 55%;
 }
-.tamanioTarjeta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.tarjeta1 h5 {
+  font-size: 15px;
+  color: white;
+  margin: 15px 15px 15px 40px;
+  padding: 0px 0px 15px 15px;
 }
 
-.tarjeta1 img{
-    margin: 10px 15px 5px 30px;
-
-    width: 55%;
+.tarjeta1:hover {
+  transform: translate(0, 20px);
 }
 
-
-
-.tarjeta2{
-    
-
-    background-color: green;
-   
-    border-style: solid;
-    border-color: white;
-    border-width: 3px;
-    border-radius: 8px;
-    transition: all 1s;
-    
+.tarjeta2:hover {
+  transform: translate(0, -20px);
 }
 
-.tarjeta2 img{
-    margin: 10px 15px 5px 30px;
-
-    width: 55%;
+.tamanioTarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.tarjeta2 h5{
-
-    font-size: 15px;
-   
-    color:white;
-    margin:15px 15px 15px 40px;
-    padding: 0px 0px 5px 15px;
+.tarjeta2 {
+  background-color: green;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 8px;
+  transition: all 1s;
+}
+.tarjeta2 img {
+  margin: 10px 15px 5px 30px;
+  width: 55%;
+}
+.tarjeta2 h5 {
+  font-size: 15px;
+  color: white;
+  margin: 15px 15px 15px 40px;
+  padding: 0px 0px 5px 15px;
 }
 
-.navbar{   
-    margin-top: 10px;
-    padding: 10px;
-    grid-area: navbar; 
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    position:relative;
-    background-color: green;
-   
-    
+.navbar {
+  margin-top: 10px;
+  padding: 10px;
+  grid-area: navbar;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-color: green;
 }
-header img{
-    
-    width: 100%;
-    height: 300px;
-    
-}
-
-.navbar ul{
-    display: flex;
-    list-style: none;
-  
+.navbar ul {
+  display: flex;
+  list-style: none;
 }
 .navbar ul li {
-   
-    padding: 13px;
-   
-    
+  padding: 13px;
 }
-.navbar ul li a{
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
 }
 
-    
+/*header img{
 
-
-.bodyRegistros{
-    display: grid;
-    grid-template-columns:repeat(2,1fr) ;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "navbarRegistros navbarRegistros navbarRegistros"
-                         "headerRegistros headerRegistros headerRegistros"   
-                         "mainRegistros mainRegistros mainRegistro"
-                         "footerRegistros footerRegistros footerRegistros";
-
-}
-
-.navbarRegistros{
-    grid-area: navbarRegistros;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: green;
-
-}
-.navbarRegistros ul{
-    display: flex;
-    list-style: none;
-   
-
-}
-
-.navbarRegistros ul li{
-    padding: 15px;
-}
-.navbarRegistros ul li a{
-    text-decoration: none;
     width: 100%;
-    color: white;
-    font-size: 24px;
-    
+    height: 300px;
+
+}*/
+.bodyRegistros {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "navbarRegistros navbarRegistros navbarRegistros" "headerRegistros headerRegistros headerRegistros" "mainRegistros mainRegistros mainRegistro" "footerRegistros footerRegistros footerRegistros";
 }
 
-.headerRegistros{
-   grid-area: headerRegistros;
-   color: white ;
-    text-align: center;
-    padding-bottom: 10px;
-    font-size: 20px;
-    background-color: green;
-    font-family: "Lobster";
-
+.navbarRegistros {
+  grid-area: navbarRegistros;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: green;
 }
-.mainRegistros{
-    grid-area: mainRegistros;
-   
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+.navbarRegistros ul {
+  display: flex;
+  list-style: none;
 }
-.formularioRegistros{
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-     
-    background-color: greenyellow;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: yellowgreen;
-    
-
+.navbarRegistros ul li {
+  padding: 15px;
+  padding: 15px;
+}
+.navbarRegistros ul li a {
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  font-size: 24px;
 }
 
-.footerRegistros{
-    grid-area: footerRegistros;
-    background-color: green;
-
-}
-.sexo{
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: greenyellow;
-    width: 100%;
-   text-align: center;
-}
-.btn{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    
-}
-.btn input.enviar{
-    margin-bottom: 10px; /*ver biien despue*/
+.headerRegistros {
+  grid-area: headerRegistros;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background-color: green;
+  font-family: "Lobster";
 }
 
+.mainRegistros {
+  grid-area: mainRegistros;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formularioRegistros {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: greenyellow;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: yellowgreen;
+}
+
+.footerRegistros {
+  grid-area: footerRegistros;
+  background-color: green;
+}
+
+.sexo {
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: greenyellow;
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.btn input.enviar {
+  margin-bottom: 10px;
+  /*ver biien despue*/
+}
 
 /*a{
     color: white;
@@ -341,26 +286,25 @@ header img{
      border-color: white;
      border-width: 3px;
      border-radius: 8px;*/
-    
-    /* display: flex;
+/* display: flex;
      padding: 5px;
      align-content: center;
      flex-direction: column;
      background-color: green;
-     
+
      justify-content: space-around;
- 
+
  }
  .sexo{
     display: flex;
     padding: 5px;
     background-color: green;
-    
+
  }
  .formularioRegistros{
     display: flex;
     flex-direction: column;
-    
+
  }
 
 .footerRegistros{
@@ -368,91 +312,90 @@ header img{
     display: flex;
     background-color: green;
 }*/
-.bodyCarta{
-
-    background-image: url(../trento.jpg);
-    background-attachment: fixed;
+.bodyCarta {
+  background-image: url(../trento.jpg);
+  background-attachment: fixed;
 }
 
-.navbarCarta{
-
-    width: 100%;
-    
-    margin: 0;
-    position: sticky;
-    top: 0;
-    background-color: green;
+.navbarCarta {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  background-color: green;
 }
-
 .navbarCarta ul {
-
-    list-style: none;
-    margin: 0px;
+  list-style: none;
+  margin: 0px;
+}
+.navbarCarta ul li {
+  display: inline-block;
+  padding: 10px 10px 10px 40px;
+  font-size: 24px;
+}
+.navbarCarta ul li a {
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  font-size: 24px;
 }
 
-.navbarCarta ul li{
-    display: inline-block;
-    padding: 10px 10px 10px 40px;
-   font-size: 24px;
-
-}
-.tarjetaContacto{
-    background-color: green;
-    font-size: 24px;
-    width: 30%;
-    border-style: solid;
-    border-color: white;
-    border-width: 3px;
-    border-radius: 8px;
-}
-.tarjetaUbicacion{
-    background-color: green;
-    font-size: 20px;
-    width: 50%;
-    border-style: solid;
-    border-color: white;
-    border-width: 3px;
-    border-radius: 8px;
-    color: white;
-    font-family: "Lobster";
-    
+.tarjetaContacto {
+  background-color: green;
+  font-size: 24px;
+  width: 30%;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 8px;
 }
 
-.tarjetaSorrentinos{
-    width: 20%;
-    background-color: green;
-    border-style: solid;
-    border-color: white;
-    border-width: 3px;
-    border-radius: 8px;
-    color: white;
-
+.tarjetaUbicacion {
+  background-color: green;
+  font-size: 20px;
+  width: 50%;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 8px;
+  color: white;
+  font-family: "Lobster";
 }
-    .tarjetaProducto{
-        width: 20%;
-        background-color: green;
-    border-style: solid;
-    border-color: white;
-    border-width: 3px;
-    border-radius: 8px;
-    color: white;
-    }
 
-    @media(min-width:768px){
+.tarjetaSorrentinos {
+  width: 20%;
+  background-color: green;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 8px;
+  color: white;
+}
 
-        .bodyIndex{
-    
-            
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: 200px auto auto auto auto;
-            grid-template-areas:    "header header header header "
-                                    "navbar navbar navbar navbar "
-                                    "main   main  aside aside "
-                                    "main main aside aside"
-                                    "footer footer footer footer";
-        
-        }
+.tarjetaProducto {
+  width: 20%;
+  background-color: green;
+  border-style: solid;
+  border-color: white;
+  border-width: 3px;
+  border-radius: 8px;
+  color: white;
+}
 
-    }
-        
-    
+@media (min-width: 768px) {
+  .bodyIndex {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px auto auto auto auto;
+    grid-template-areas: "header header header header " "navbar navbar navbar navbar " "main   main  aside aside " "main main aside aside" "footer footer footer footer";
+  }
+
+  .tarjeta1:hover {
+    transform: translate(20px, -20px);
+  }
+
+  .tarjeta2:hover {
+    transform: translate(-20px, -20px);
+  }
+}
