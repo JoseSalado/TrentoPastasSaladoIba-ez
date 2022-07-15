@@ -1,0 +1,91 @@
+bodyRegistros{
+    display: grid;
+    grid-template-columns:repeat(2,1fr) ;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "navbarRegistros navbarRegistros navbarRegistros"
+                         "headerRegistros headerRegistros headerRegistros"   
+                         "mainRegistros mainRegistros mainRegistro"
+                         "footerRegistros footerRegistros footerRegistros";
+
+}
+
+.navbarRegistros{
+    grid-area: navbarRegistros;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: green;
+    ul{
+        display: flex;
+        list-style: none;
+       
+        li{
+            padding: 15px;
+            
+                padding: 15px;
+                a{
+                    text-decoration: none;
+                    width: 100%;
+                    color: white;
+                    font-size: 24px;
+                    
+                  }
+            }
+         }
+
+}
+
+
+
+
+ 
+
+
+.headerRegistros{
+   grid-area: headerRegistros;
+   color: white ;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background-color: green;
+    font-family: "Lobster";
+
+}
+.mainRegistros{
+    grid-area: mainRegistros;
+   
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.formularioRegistros{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+     
+    background-color: greenyellow;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: yellowgreen;
+    
+
+}
+
+.footerRegistros{
+    grid-area: footerRegistros;
+    background-color: green;
+}
+.sexo{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: greenyellow;
+    width: 100%;
+   text-align: center;
+}

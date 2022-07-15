@@ -1,171 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Joan&family=Lobster&display=swap');
-*{  
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
 
-.bodyIndex{
-    
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows:     200px auto auto auto auto;
-    grid-template-areas:    "header header header header"
-                            "navbar navbar navbar navbar"
-                            "main   main  main    main"
-                            "aside  aside aside   aside"
-                            "footer footer footer footer";
-
-}
-
-.header {
-    
-    display: flex;
-    flex-direction:column;
-    grid-area: header ;
-    img{
-        width: 100%;
-        height: 160px;
-    
-    }
-
-    h1{ 
-  
-        color: white ;
-        text-align: center;
-        font-size: 45px;
-        background-color: green;
-        font-family: "Lobster";
-    }
-}
- 
-/*.imagen{
-    height:150px;
-}*/
-
-
-
-.main{
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center; 
-    justify-content: space-between;  
-
-
-     
-}
-
-.aside{ 
-    grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center; 
-    justify-content: space-between; 
-    
-}
-.footer {
-    background-color: green;
-    grid-area: footer;
-}
- 
-
-.tarjeta1 {
- 
-    
-    background-color: green;
-    border-style: solid;
-    border-color: white;
-   
-    border-radius: 8px;
-    transition: all 1s;
-    img{
-        margin: 10px 15px 5px 30px;
-    
-        width: 55%;
-    }
-    h5{
-
-    
-        font-size: 15px;
-        color:white;
-        margin:15px 15px 15px 40px;
-        padding: 0px 0px 15px 15px;
-        
-    }
-  }
-.tarjeta1:hover{
-    transform: translate(0, 20px)
-}
-.tarjeta2:hover{
-    transform: translate(0, -20px)
-}
-.tamanioTarjeta{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
+@import "index";
+@import"registros";
+@import "reset";
 
 
 
 
-
-.tarjeta2{
-    
-
-    background-color: green;
-   
-    border-style: solid;
-    border-color: white;
-    border-width: 3px;
-    border-radius: 8px;
-    transition: all 1s;
-    img{
-        margin: 10px 15px 5px 30px;
-    
-        width: 55%;
-    }
-    h5{
-
-        font-size: 15px;
-       
-        color:white;
-        margin:15px 15px 15px 40px;
-        padding: 0px 0px 5px 15px;
-    }
-    
-}
- 
-.navbar{   
-    margin-top: 10px;
-    padding: 10px;
-    grid-area: navbar; 
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    position:relative;
-    background-color: green;
-    ul{
-        display: flex;
-        list-style: none;
-        li {
-   
-            padding: 13px;
-           
-            a{
-                text-decoration: none;
-                color: white;
-                font-size: 24px;
-            }
-        }
-    }
-   
-    
-}
 /*header img{
     
     width: 100%;
@@ -173,106 +14,49 @@
     
 }*/
     
-.bodyRegistros{
-    display: grid;
-    grid-template-columns:repeat(2,1fr) ;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "navbarRegistros navbarRegistros navbarRegistros"
-                         "headerRegistros headerRegistros headerRegistros"   
-                         "mainRegistros mainRegistros mainRegistro"
-                         "footerRegistros footerRegistros footerRegistros";
-
+@mixin propiedades($ancho , $alto , $colorLetra) {
+    width: $ancho;
+    height: $alto;
+    color: $colorLetra;
 }
-
-.navbarRegistros{
-    grid-area: navbarRegistros;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: green;
-    ul{
-        display: flex;
-        list-style: none;
-       
-        li{
-            padding: 15px;
-            
-                padding: 15px;
-                a{
-                    text-decoration: none;
-                    width: 100%;
-                    color: white;
-                    font-size: 24px;
-                    
-                  }
-            }
-         }
-
-}
+$colorBtn : (
+    primario : rgb(101, 163, 214), 
+    secundario : rgb(196, 105, 191)
 
 
+);
+$btn :(
+    display: flex,
+    flex-direction: column,
+    padding: 10px,
+    text-aling : center
+);
 
-
- 
-
-
-.headerRegistros{
-   grid-area: headerRegistros;
-   color: white ;
-    text-align: center;
-    padding-bottom: 10px;
-    font-size: 20px;
-    background-color: green;
-    font-family: "Lobster";
-
-}
-.mainRegistros{
-    grid-area: mainRegistros;
-   
+@each $key , $var in $colorBtn {
+    @extend .btn;
+    .btn-#{$key}{
+        background-color: $var;
+    }
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-}
-.formularioRegistros{
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-     
-    background-color: greenyellow;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: yellowgreen;
-    
-
 }
 
-.footerRegistros{
-    grid-area: footerRegistros;
-    background-color: green;
-
-}
-.sexo{
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: greenyellow;
-    width: 100%;
-   text-align: center;
-}
 .btn{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+    display: map-get($btn, display ); 
+    flex-direction: map-get($btn , flex-direction);
+    padding: map-get($btn , padding );
+    text-align: map-get($btn , text-align );
+    @include propiedades ( 100px , auto , rgb rgb(255, 255, 255));
     
 }
 .btn input.enviar{
+    
+   
+    background-color: map-get($colorBtn , primario );
     margin-bottom: 10px; /*ver biien despue*/
+}
+.btn input.reiniciar{
+   
+    background-color: map-get($colorBtn , secundario );
 }
 
 

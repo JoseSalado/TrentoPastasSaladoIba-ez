@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Joan&family=Lobster&display=swap");
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-
 .bodyIndex {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -129,13 +123,7 @@
   font-size: 24px;
 }
 
-/*header img{
-
-    width: 100%;
-    height: 300px;
-
-}*/
-.bodyRegistros {
+bodyRegistros {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto auto auto;
@@ -209,15 +197,40 @@
   text-align: center;
 }
 
-.btn {
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/*header img{
+
+    width: 100%;
+    height: 300px;
+
+}*/
+.btn-primario {
+  background-color: rgb(101, 163, 214);
+}
+
+.btn-secundario {
+  background-color: rgb(196, 105, 191);
+}
+
+.btn, .btn input.reiniciar, .btn input.enviar {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
 
 .btn input.enviar {
+  background-color: rgb(101, 163, 214);
   margin-bottom: 10px;
   /*ver biien despue*/
+}
+
+.btn input.reiniciar {
+  background-color: rgb(196, 105, 191);
 }
 
 /*a{
